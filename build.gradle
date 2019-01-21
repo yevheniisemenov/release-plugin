@@ -2,11 +2,15 @@ buildscript {
     repositories { jcenter() }
     dependencies {
         classpath 'com.netflix.nebula:nebula-release-plugin:6.3.5'
+        classpath "com.netflix.nebula:nebula-publishing-plugin:7.1.0"
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'nebula.release'
+apply plugin: "nebula.maven-publish"
+apply plugin: "nebula.javadoc-jar"
+apply plugin: "nebula.source-jar"
 
 //plugins {
 //    id 'java'
